@@ -23,15 +23,6 @@ client = AsyncAzureOpenAI(
 # create the app server
 app = FastAPI()
 
-# the server is on a different port so we have to deal with CORS.
-# we could delete this if we used nginx as reverse proxy.
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=['*'], 
-#     allow_credentials=True,
-#     allow_methods=['*'],
-#     allow_headers=['*'])
-
 
 def new_messages() -> List[str]:
     '''Creates a new message history with just the system prompt and greeting.

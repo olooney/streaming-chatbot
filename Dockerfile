@@ -28,9 +28,6 @@ RUN ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/
 # Expose the port nginx is reachable on
 EXPOSE 80
 
-# Define environment variable
-ENV NAME World
-
 # Run nginx and Uvicorn on container startup
 WORKDIR /app/server
 CMD service nginx start && uvicorn server:app --host 0.0.0.0 --port 8000

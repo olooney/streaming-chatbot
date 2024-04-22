@@ -11,20 +11,13 @@ server-side chatbot.
 - **Docker Integration**: Simplifies deployment and environment setup.
 - **Nginx Reverse Proxy**: Efficiently manages static content and WebSocket connections.
 
-## Requirements
-
-- Docker
-- Docker Compose (optional for easier management)
-- Python 3.10
-- Web browser with WebSocket support
-
 ## Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://your-repository-url.git
-cd streaming_docker
+git clone https://github.com/olooney/streaming-chatbot
+cd streaming-chatbot
 cp credentials.example.yaml azure_credentials.yaml
 # edit azure_credentials.yaml to include your keys
 ```
@@ -37,6 +30,10 @@ docker run -p 8080:80 chatbot-server
 ```
 
 Visit http://localhost:8080 to interact with the demo.
+
+*THIS DEMO USES INSECURE WEBSOCKETS AND IS ONLY INTENDED TO BE RUN LOCALLY.*
+
+
 
 
 

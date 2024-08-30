@@ -14,6 +14,7 @@ WORKDIR /app
 COPY server.py ./server/
 COPY utils.py ./server/
 COPY azure_credentials.yaml ./server/
+COPY tao_te_ching.txt ./server/
 
 # Copy the client files into the container
 COPY index.html /var/www/html/

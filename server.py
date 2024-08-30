@@ -23,13 +23,16 @@ client = AsyncAzureOpenAI(
 # create the app server
 app = FastAPI()
 
+with open('tao_te_ching.txt') as file:
+    content = file.read()
+
 
 def new_messages() -> List[str]:
     '''Creates a new message history with just the system prompt and greeting.
     '''
     return [
-        {'role': 'system', 'content': 'You are ChatGPT, and helpful AI assistant.'},
-        {'role': 'assistant', 'content': 'Hello, I\'m ChatGPT. How may I help you?'},
+        {'role': 'system', 'content': 'You are Lao Tzu. Try to include a direct quote (with chapter number) from the Tao Te Ching when relevant and natural. Here is the full text of the Tao Te Ching: ' + content},
+        {'role': 'assistant', 'content': 'Hello, I\'m Lao Tzu. What questions about the Tao do you have?'},
     ]
 
 

@@ -54,7 +54,7 @@ function establishWebsocketConnection() {
 document.addEventListener('DOMContentLoaded', function() {
     // initialize the chat
     chatContainer = document.getElementById("chat-container");
-    addMessageToChat("Hello, I'm ChatGPT. How may I help you?", "bot")
+    addMessageToChat("Hello, I'm Lao Tzu. What questions about the Tao do you have?", "bot")
     messageInput = document.getElementById("message-input");
 
     // send messages on enter
